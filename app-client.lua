@@ -10,21 +10,13 @@ print(client)
 client:connect(PORT, HOST)
 client:on("connection", function(sck, msg)
   print("Connected!!!!")
-  uart.on("data", "\n",
+  uart.on("data", "\r",
     function(data)
-      --x, y, z, dir = data:match("(-*%d+)\t(-*%d+)\t(-*%d+)\t(-*%d+)")
+      --x, y, z = data:match("(-*%d+),(-*%d+),(-*%d+)")
       if (string.match(data, "quit")) then
-        print("Quitting...")
+        print("Quitting app...")
         uart.on("data") -- quit this listener
-      --[[
-      elseif (x ~= nil and y ~= nil and z ~= nil and dir ~= nil) then
-        print(x .. " " .. " " .. y .. " " .. z .. " " .. dir)
-        x = tonumber(x)
-        y = tonumber(y)
-        z = tonumber(z)
-        dir = tonumber(dir)
       end
-      --]]
       sck:send(data)
     end,
     0)
