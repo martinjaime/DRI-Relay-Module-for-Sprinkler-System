@@ -1,0 +1,23 @@
+{
+  "name": "sprinkler-monitor",
+  "version": "1.0.0",
+  "description": "These set of scripts read sensor data from a monitor device, and posts them to a web server",
+  "main": "tcp-server.ls",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "lsc tcp-server.ls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinjaime/DRI-Relay-Module-for-Sprinkler-System.git"
+  },
+  "author": "Martin Jaime-Viveros",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martinjaime/DRI-Relay-Module-for-Sprinkler-System/issues"
+  },
+  "homepage": "https://github.com/martinjaime/DRI-Relay-Module-for-Sprinkler-System#readme",
+  "dependencies": {
+    "ip": "^1.1.3"
+  }
+}

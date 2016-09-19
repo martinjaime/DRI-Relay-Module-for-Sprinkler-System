@@ -1,8 +1,9 @@
 require! {
   'net'
+  'ip'
 }
 
-HOST = "192.168.43.178"
+HOST = ip.address!
 PORT = 5000
 
 server = net.create-server (socket) ->
