@@ -1,4 +1,4 @@
--- load credentials, 'SSID' and 'PASSWORD' declared and initialize in there
+-- load credentials, 'SSID' and 'PASSWORD'
 dofile("credentials.lua")
 
 function startup()
@@ -15,7 +15,7 @@ end
 print("Connecting to WiFi access point...")
 wifi.setmode(wifi.STATION)
 wifi.sta.config(SSID, PASSWORD)
--- wifi.sta.connect() not necessary because config() uses auto-connect=true by default
+-- wifi.sta.connect() -- not necessary because config() uses auto-connect=true by default
 ------- Set static IP  -------
 --wifi.sta.setip( {ip="192.168.43.100",
 --               netmask="255.255.255.0",
