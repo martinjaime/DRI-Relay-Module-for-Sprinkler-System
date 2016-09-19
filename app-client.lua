@@ -2,6 +2,7 @@
 -- Water sprinklers monitor
 PORT = 5000
 HOST = "192.168.43.178"
+BAUD = 4800
 print("========================================")
 print("Starting client")
 print("========================================")
@@ -10,6 +11,7 @@ print(client)
 client:connect(PORT, HOST)
 client:on("connection", function(sck, msg)
   print("Connected!!!!")
+  uart.setup(0, BAUD, 8, uart.PARITY_NONE, uart.STOPBITS_1, 0)
   uart.on("data", "\r",
     function(data)
       --x, y, z = data:match("(-*%d+),(-*%d+),(-*%d+)")
