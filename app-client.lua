@@ -1,8 +1,6 @@
 -- Desert Research Institute
 -- Water sprinklers monitor
-PORT = 5000
-HOST = "192.168.43.178"
-BAUD = 4800
+dofile("server-settings.lua")
 print("========================================")
 print("Starting client")
 print("========================================")
