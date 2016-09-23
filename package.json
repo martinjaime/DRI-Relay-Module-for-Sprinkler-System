@@ -5,7 +5,7 @@
   "main": "tcp-server.ls",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "run": "lsc tcp-server.ls"
+    "start": "lsc tcp-server.ls"
   },
   "repository": {
     "type": "git",
