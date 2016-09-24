@@ -27,6 +27,7 @@ server = net.create-server (socket) ->
 
   socket.on 'data', (data) ->
     data .= to-string!.trim!
+    console.log "got data: #{data}"
     data-obj = {}
     data .= replace /^{\[/, ''
     data .= replace /\]}$/, ''
@@ -43,6 +44,8 @@ server = net.create-server (socket) ->
       file-exists := yes
     if data-values.length is not 1
       fs.append-file-sync file-name, data-values.join(',') + '\n'
+      console.log "writing: #{data-values.join(',')}"
+
 
   socket.on 'close', (data) ->
     console.log 'CLOSED: ' + socket.remote-address + ' ' + socket.remote-port
