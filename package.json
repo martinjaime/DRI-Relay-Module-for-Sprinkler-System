@@ -19,5 +19,8 @@
   "homepage": "https://github.com/martinjaime/DRI-Relay-Module-for-Sprinkler-System#readme",
   "dependencies": {
     "ip": "^1.1.3"
+  },
+  "devDependencies": {
+    "livescript": "^1.5.0"
   }
 }
