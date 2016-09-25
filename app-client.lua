@@ -9,7 +9,7 @@ print(client)
 client:connect(PORT, HOST)
 client:on("connection", function(sck, msg)
   print("Connected!!!!")
-  uart.setup(0, BAUD, 8, uart.PARITY_NONE, uart.STOPBITS_1, 0)
+  --uart.setup(0, BAUD, 8, uart.PARITY_NONE, uart.STOPBITS_1, 0)
   uart.on("data", "\r",
     function(data)
       --x, y, z = data:match("(-*%d+),(-*%d+),(-*%d+)")
